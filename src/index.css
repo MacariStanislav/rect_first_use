@@ -1,0 +1,378 @@
+/* Reset and base styles  */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul,
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: white;
+    color: #222;
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 50px auto;
+
+}
+
+header {
+    position: relative;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+header ul.nav {
+    float: right;
+    list-style: none;
+
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover {
+    opacity: 0.5;
+}
+
+header .shop_cart_button {
+    float: right;
+    cursor: pointer;
+    transition: color 500ms ease;
+    transition: transform 500ms ease;
+
+}
+
+header .shop_cart_button:hover,
+header .shop_cart_button.active {
+    color: #dc3d3d;
+    transform: scale(1.5);
+}
+
+header .shop_cart {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 450px;
+    background: rgb(226, 226, 226);
+    -webkit-box-shadow: 16px 13px 29px -9px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 16px 13px 29px -9px rgba(0, 0, 0, 0.67);
+    box-shadow: 16px 13px 29px -9px rgba(0, 0, 0, 0.67);
+    z-index: 1;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+header .shop_cart .item {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+
+}
+header .shop_cart .item .delete_icon {
+    color: rgb(227, 81, 81);
+    float: right;
+    position: relative;
+    top: -25px;
+    cursor: pointer;
+    transition: color 500ms ease;
+
+}
+header .shop_cart .item .delete_icon:hover{
+    color: red;
+    transform: scale(1.5);
+}
+header .shop_cart .summa {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+header .shop_cart  .empty h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header .shop_cart .item img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 20px;
+
+}
+
+header .shop_cart .item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+header .shop_cart .item p {
+    color: #5f5f5f;
+    font-weight: 600;
+}
+
+header .presentation {
+    margin: 50px 0;
+    background: url('./img/badroom.jpg') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #bcbcbc;
+    position: relative;
+}
+
+
+header .presentation::after {
+    content: "лучшие товары для вашего дома";
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+
+}
+
+header .presentation::before {
+    content: "по низким ценам";
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+}
+
+.categories div{
+    display: inline-block;
+    background: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border:1px solid transparent;
+    transition: all 500ms ease;
+}
+
+.categories div:hover{
+    border-color: silver;
+    transform: scale(1.1);
+}
+
+.full_item{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #8a8a8a7e;
+    z-index: 9999;
+    overflow: auto;
+
+}
+.full_item>div {
+    width: 600px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 9px;
+
+}
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #f5f5f5;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+
+}
+
+main .item img,
+.full_item img {
+    height: 70%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+    cursor: pointer;
+
+
+}
+
+main .item img:hover,
+.full_item img:hover {
+    transform: scale(1.05);
+}
+
+main h2,.full_item h2,
+main p,.full_item p,
+main b,.full_item b  {
+    margin: 10px 20px;
+    color: #333;
+
+}
+
+main b,
+.full_item b {
+    color: rgb(19, 163, 19);
+}
+
+main .add_to_card,
+.full_item .add_to_card
+ {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgb(187, 47, 47);
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+}
+
+main .add_to_card:hover,
+.full_item .add_to_card:hover {
+    transform: scale(1.5) translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
